@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №3</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+        }
+
+        header {
+            background: #4a90e2;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            font-size: 28px;
+        }
+
+        nav {
+            background: #333;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+            nav a {
+                color: white;
+                text-decoration: none;
+                font-size: 18px;
+            }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .btn {
+            background: #4a90e2;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: #4a90e2;
+            border-radius: 10px;
+            margin-top: 20px;
+            transition: transform 0.5s ease, background 0.5s ease;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 20px;
+            background: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Лабораторна робота №3 — Макет сайту + анімація JS
+    </header>
+
+    <nav>
+        <a href="#">Головна</a>
+        <a href="#">Про нас</a>
+        <a href="#">Контакти</a>
+    </nav>
+
+    <div class="container">
+        <h2>Анімація за допомогою JavaScript</h2>
+        <p>Натисніть кнопку, щоб побачити анімацію:</p>
+
+        <button class="btn" onclick="animateBox()">Запустити анімацію</button>
+
+        <div id="box" class="box"></div>
+    </div>
+
+    <footer>
+        Автор: Дмитро Беспалов © 2026
+    </footer>
+
+    <script>
+        function animateBox() {
+        const box = document.getElementById("box");
+
+        box.style.transform = "translateX(300px) rotate(360deg)";
+        box.style.background = "#e24a4a";
+
+        setTimeout(() => {
+        box.style.transform = "translateX(0px)";
+        box.style.background = "#4a90e2";
+        }, 1500);
+        }
+    </script>
+
+</body>
+</html>
